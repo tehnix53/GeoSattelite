@@ -35,6 +35,9 @@ for i in images:
     df = df.append(df_temp)
 
 df = df.reset_index()
+
+df['name'] = ['SENTITEL_001.JPG', 'SENTITEL_002.JPG', 'SENTITEL_003.JPG']
+
 df['category'] = ['norm', 'weeds', 'wasteland']
 df['id'] = [0,1,2]
 sorted_file = df.sort_values(['name']).values
